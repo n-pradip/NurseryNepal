@@ -1,19 +1,31 @@
-// import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Error from "./pages/Error";
+import Blogpost from "./pages/Blogpost";
+import Faq from "./pages/Faqs";
+import Search from "./pages/Search";
+import Contact from "./pages/Contact";
 
-// const App = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default App
-
-export default function App() {
+const App = () => {
+  
   return (
-    <h1 className="text-3xl font-bold text-red-600 underline">
-      Hello world!
-    </h1>
-  )
-}
+    <div>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/blogpost/:id" element={<Blogpost />} />
+        <Route path="/faqs" element={<Faq />} />
+        <Route path="/search/:text" element={<Search />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+
+    </div>
+  );
+};
+
+export default App;
