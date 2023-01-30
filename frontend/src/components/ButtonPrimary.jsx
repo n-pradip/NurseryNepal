@@ -5,7 +5,7 @@ const ButtonPrimary = (props) => {
         <div>
             <button
                 type="submit"
-                className="ml-3 inline-block rounded bg-[#09B10C] hover:opacity-90 px-5 py-3 text-sm font-medium text-white">
+                className="inline-block rounded bg-[#09B10C] hover:opacity-90 px-4 py-2 text-sm font-medium text-white  active:bg-[#09b10cda]">
                 {props.text}
             </button>
         </div>
