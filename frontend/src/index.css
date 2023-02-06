@@ -10,6 +10,6 @@
 
 @layer components {
   .nav-style {
-    @apply  w-full p-[10px] text-center text-white border-b-[1px] border-[rgba(255,255,255,0.45)] lg:border-r-[1px] lg:border-[rgba(255,255,255,0.45)] hover:bg-[rgba(0,0,0,0.08)] ;
+    @apply  w-full p-[12px] text-center text-white font-[500] border-b-[1px] lg:border-b-[0px] border-[rgba(255,255,255,0.45)] lg:border-r-[1px] lg:border-[rgba(255,255,255,0.45)] hover:bg-[rgba(0,0,0,0.08)] ;
   }
 }
