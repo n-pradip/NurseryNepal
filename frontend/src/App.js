@@ -8,6 +8,7 @@ import Blogpost from "./pages/Blogpost";
 import Faq from "./pages/Faqs";
 import Search from "./pages/Search";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 const App = () => {
   
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Homepage />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/blogpost/:id" element={<Blogpost />} />
         <Route path="/faqs" element={<Faq />} />
         <Route path="/search/:text" element={<Search />} />
