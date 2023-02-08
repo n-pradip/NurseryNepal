@@ -17,6 +17,7 @@ STATUS = (
 
 class BlogpostModel(models.Model):
     title = models.CharField(max_length=255, null=False, default="", blank=False)
+    author = models.CharField(max_length=255, blank=False, null=False, default="NNE")
     category = models.ForeignKey(CategoryModel, on_delete=models.CASCADE)
     slug = models.SlugField(max_length=128, null=True)
     image = models.ImageField(upload_to="blog/images", null=True, blank=True)
