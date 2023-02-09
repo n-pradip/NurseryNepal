@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from src.apps.blog.models import BlogpostModel, CategoryModel, SubscriptionModel
+from src.apps.blog.models import BlogpostModel, CategoryModel
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -14,10 +14,4 @@ class BlogpostSerializer(serializers.ModelSerializer):
         model = BlogpostModel
         fields = ["id","title", "author", "category", "slug", "image", "content", "featured", "status", "created_at"]
         read_only_fields = ["slug"]
-
-
-class SubscriptionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = SubscriptionModel
-        fields = '__all__'
 
