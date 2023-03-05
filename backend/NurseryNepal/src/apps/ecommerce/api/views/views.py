@@ -6,11 +6,6 @@ from src.apps.ecommerce.api.serializers.serializers import SubscriptionSerialize
 from src.apps.ecommerce.models import SubscriptionModel, ContactModel, ProductCategoryModel, ProductModel
 
 
-class SubscriptionCreateAPIView(generics.CreateAPIView):
-    queryset = SubscriptionModel.objects.all()
-    serializer_class = SubscriptionSerializer
-
-
 class ProductView(viewsets.ModelViewSet):
     queryset = ProductModel.objects.all()
     serializer_class = ProductSerializer
