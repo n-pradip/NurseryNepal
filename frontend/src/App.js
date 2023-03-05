@@ -9,23 +9,25 @@ import Faq from "./pages/Faqs";
 import Search from "./pages/Search";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import { Provider } from "react-redux";
+import store from './store/store'
 
 const App = () => {
-  
   return (
     <div>
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Homepage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blogpost/:id" element={<Blogpost />} />
-        <Route path="/faqs" element={<Faq />} />
-        <Route path="/search/:text" element={<Search />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-
+      <Provider store={store}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<Blogpost />} />
+          <Route path="/faqs" element={<Faq />} />
+          <Route path="/search/:text" element={<Search />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Provider>
     </div>
   );
 };
